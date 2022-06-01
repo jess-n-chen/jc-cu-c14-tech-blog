@@ -1,8 +1,8 @@
-# Jessica Chen - E-Commerce Back End
+# Jessica Chen - Tech Blog
 
-## Columbia University Bootcamp - Object-Relational Mapping (ORM) Challenge: E-commerce Back End
+## Columbia University Bootcamp - Model-View-Controller (MVC) Challenge: Tech Blog
 
-> This repository contains my code for an e-commerce website backend to manage category, product and tag data using API endpoints.
+> This repository contains my CMS-style blog site that allows users to publish and comment on other posts.
 > Link to Live Site:
 
 ## Table of Contents
@@ -16,7 +16,7 @@
 
 ## General Information
 
-This repository contains my code for an e-commerce website backend to manage category, product and tag data using API endpoints. The endpoints can be used to get, create, update and delete data.
+This repository contains my CMS-style blog site that allows end users (specifically developers) to publish their blog posts and comment on other developers' posts. Users will be required to login or create an account in order to create
 
 ## Project Requirements
 
