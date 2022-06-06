@@ -1,5 +1,6 @@
 // Import Required Packages & Files
 const router = require("express").Router();
+const withAuth = require("../utils/auth");
 
 // Import Required Models
 const { User, Post, Comment } = require("../models");
@@ -28,7 +29,7 @@ router.get("/", async (req, res) => {
 });
 
 // Get Single Post
-router.get("/", async (req, res) => {
+router.get("/post/:id", withAuth, async (req, res) => {
   try {
     const postData = await Post.findOne({
       attributes: ["id", "title", "content", "created_at"],

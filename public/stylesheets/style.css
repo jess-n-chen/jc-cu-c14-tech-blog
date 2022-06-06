@@ -1,3 +1,12 @@
+/* Declare CSS Variables */
+:root {
+  --light-purple: #dbd8e3;
+  --primary-purple: #5c5470;
+  --dark-purple: #352f44;
+  --darker-purple: #2a2438;
+}
+
+/* General Styling */
 * {
   box-sizing: border-box;
 }
@@ -12,13 +21,120 @@ html {
 }
 
 main {
-  width: 80%;
+  width: 90%;
   min-height: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Header Styling */
+header {
+  background-color: var(--darker-purple);
+}
+
+.nav-link {
+  color: var(--light-purple) !important;
+  font-size: 1.5rem !important;
+}
+
+.nav-item {
+  margin-right: 2rem;
+}
+
+.app-title {
+  background-color: var(--light-purple);
+  color: var(--darker-purple);
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px var(--light-purple);
+  padding: 5px 12px;
+  width: 25%;
+}
+
 .btn-logout {
   border: none;
   background: transparent;
+}
+
+/* Login and Signup Form Styling */
+.btn-form {
+  background-color: var(--light-purple);
+  border-radius: 10px;
+  color: var(--dark-purple);
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.alt-link {
+  color: var(--primary-purple);
+  text-decoration: none;
+}
+
+.alt-link:hover {
+  color: var(--darker-purple);
+  text-decoration: underline;
+}
+
+/* Post Styling */
+.post-header {
+  background-color: var(--dark-purple);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 12px;
+}
+
+.post-header a {
+  color: var(--light-purple);
+  text-decoration: none;
+}
+
+.post-header a:hover {
+  color: var(--light-purple);
+  text-decoration: underline;
+}
+
+.post-meta {
+  color: var(--light-purple);
+  padding-top: 0.5rem;
+  text-align: right;
+}
+
+.post-body {
+  border: 2px solid var(--dark-purple);
+}
+
+/* Dashboard Styling */
+.new-post {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+
+.btn-new {
+  background-color: var(--light-purple);
+  border-radius: 10px;
+  color: var(--dark-purple);
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  text-decoration: none;
+  width: 50%;
+}
+
+.btn-new:hover {
+  background-color: var(--dark-purple);
+  color: var(--light-purple);
+}
+
+/* Comment Styling */
+.comment-header {
+  background-color: var(--dark-purple);
+  display: flex;
+  flex-wrap: wrap;
+  height: 3rem;
+  justify-content: center;
+  padding: 10px 12px;
 }

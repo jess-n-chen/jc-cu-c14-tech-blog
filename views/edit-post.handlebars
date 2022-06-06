@@ -1,21 +1,31 @@
-<article>
-  <h2>
-    Edit Post
-  </h2>
-  <form class="edit-post-form">
-    <div class="row">
-      <label for="post-title" class="form-label">Title</label>
-      <input id="post-title" type="text" value="{{post.title}}" />
+<div class="card">
+  <h2 class="card-header">Edit Post</h2>
+  <form id="edit-post-form" class="edit-post-form m-3">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        value="{{post.title}}"
+      />
     </div>
-    <div class="row">
-      <label for="post-content" class="form-label">Content</label>
-      <input id="post-content" type="text" value="{{post.content}}" />
+    <div class="mb-3">
+      <label for="content" class="form-label">Content</label>
+      <textarea
+        class="form-control"
+        id="content"
+        rows="3"
+      >{{post.content}}</textarea>
     </div>
-    <button type="submit">Update Post</button>
-    <button type="button" class="delete-post-btn">Delete</button>
+    <div class="mb-3">
+      <button type="submit" class="btn-form">Update Post</button>
+    </div>
+    <div class="mb-3">
+      <button type="button" id="delete-btn" class="btn-form">Delete</button>
+    </div>
   </form>
-</article>
+</div>
 
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
-<script src="/javascript/comment.js"></script>

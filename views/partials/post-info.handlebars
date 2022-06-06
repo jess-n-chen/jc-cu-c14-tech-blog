@@ -1,20 +1,16 @@
-<div class="card-body">
-  <div class="row my-2">
-    <div class="col-8 card-title">
-      {{#if loggedIn}}
-        <h2><a href="/post/{{id}}">{{title}}</a></h2>
-      {{else}}
-        <h2>{{title}}</h2>
-      {{/if}}
+<div class="post px-3 my-3">
+  <div class="row post-header">
+    <div class="col-8">
+      <h2><a href="/post/{{id}}">{{title}}</a></h2>
     </div>
-    <div class="col-4 card-subtitle">
-      Posted by
-      {{user.username}}
-      on
-      {{format_date created_at}}
+    <div class="col-4 post-meta">
+      <p>Posted by
+        {{user.username}}
+        on
+        {{format_date created_at}}</p>
     </div>
   </div>
-  <div class="row card-text">
+  <div class="row post-body p-3">
     <p>{{content}}</p>
   </div>
 </div>
