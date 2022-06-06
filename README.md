@@ -3,7 +3,7 @@
 ## Columbia University Bootcamp - Model-View-Controller (MVC) Challenge: Tech Blog
 
 > This repository contains my CMS-style blog site that allows users to publish and comment on other posts.
-> Link to Live Site:
+> Link to Live Site: https://afternoon-shelf-48294.herokuapp.com/
 
 ## Table of Contents
 
@@ -78,12 +78,22 @@ WHEN I click on the logout option in the navigation
 THEN I am signed out of the site
 
 WHEN I am idle on the site for more than a set time
-THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
+THEN I am able to view posts but I am prompted to log in again before I can add, update, or delete posts
 ```
 
 ## Installation
 
+1. Clone the repository to your local drive.
+2. Run `npm i` in order to install the npm package dependencies as specified in the package.json file.
+3. Run `mysql -u root -p` and `source db/schema.sql` to sync the Sequelize models to your local MySQL database.
+4. Run `npm start` in the command line to use the application.
+
 ## Screenshots
+
+![Homepage](./assets/blog_homepage.png)
+![Login Page](./assets/blog_login.png)
+![Dashboard](./assets/blog_dashboard.png)
+![Edit Post](./assets/blog_edit_post.png)
 
 ## Contact
 
