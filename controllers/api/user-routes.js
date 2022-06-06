@@ -2,7 +2,7 @@
 const router = require("express").Router();
 
 // Import Required Models
-const { User } = require("../../models");
+const { User, Post, Comment } = require("../../models");
 
 // Get All Users
 router.get("/", async (req, res) => {
@@ -25,6 +25,14 @@ router.get("/:id", async (req, res) => {
         {
           model: Post,
           attributes: ["id", "title", "content", "created_at"],
+        },
+        {
+          model: Comment,
+          attributes: ["id", "comment_text", "created_at"],
+          include: {
+            model: Post,
+            attributes: ["title"],
+          },
         },
       ],
       where: {
