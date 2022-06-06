@@ -21,6 +21,12 @@ router.get("/:id", async (req, res) => {
   try {
     const userData = await User.findOne({
       attributes: { exclude: ["password"] },
+      include: [
+        {
+          model: Post,
+          attributes: ["id", "title", "content", "created_at"],
+        },
+      ],
       where: {
         id: req.params.id,
       },
