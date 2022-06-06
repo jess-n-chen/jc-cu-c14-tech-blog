@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  color: #333;
+}
+
+main {
+  width: 80%;
+  min-height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn-logout {
+  border: none;
+  background: transparent;
+}

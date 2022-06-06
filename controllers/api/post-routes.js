@@ -1,5 +1,6 @@
-// Import Required Packages
+// Import Required Packages & Files
 const router = require("express").Router();
+const withAuth = require("../../utils/auth");
 
 // Import Required Models
 const { User, Post, Comment } = require("../../models");
@@ -70,6 +71,7 @@ router.get("/:id", async (req, res) => {
       res.status(404).json({ message: "No post found with this id" });
       return;
     }
+
     res.status(200).json(postData);
   } catch (err) {
     res.status(500).json(err);
@@ -77,13 +79,13 @@ router.get("/:id", async (req, res) => {
 });
 
 // Create New Post
-router.post("/", async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
   try {
     // expects {title: 'Object-Relational Mapping', content: 'I have really loved learning about ORMs.', user_id: 1}
     const postData = await Post.create({
       title: req.body.title,
       content: req.body.content,
-      user_id: req.body.user_id,
+      user_id: req.session.user_id,
     });
 
     res.status(200).json(postData);
